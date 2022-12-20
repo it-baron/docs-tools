@@ -1,5 +1,5 @@
 ROLLUP=./node_modules/.bin/rollup -m
-TARGETS=../static/mongodb-docs.css \
+TARGETS=../static/cat-docs.css \
         ../static/guides.css \
         ../static/stitch.css \
         ../static/landing.css \
@@ -36,8 +36,8 @@ all: $(TARGETS)
 ../static/controller.js: main/controller.js js/*.js widgets/*/*.js widgets/*.js rollup.config.js node_modules/.CURRENT
 	$(ROLLUP) -c rollup.config.js -o $@ main/controller.js
 
-../static/mongodb-docs.css: css/manual/*.css css/*.css postcss.config.js node_modules/.CURRENT
-	$(POSTCSS) css/manual/mongodb-docs.css -c postcss.config.js -o $@
+../static/cat-docs.css: css/manual/*.css css/*.css postcss.config.js node_modules/.CURRENT
+	$(POSTCSS) css/manual/cat-docs.css -c postcss.config.js -o $@
 
 # Standalone feedback widgets
 ../static/feedback.css: css/feedback.css css/fonts.css postcss.config.js node_modules/.CURRENT
@@ -60,7 +60,7 @@ all: $(TARGETS)
 
 # Utilities
 lint-css: node_modules/.CURRENT
-	./node_modules/.bin/csslint --quiet --format=compact --errors=$(ERRORS) --warnings=$(CSS_WARNINGS) css/basic.css css/mongodb-docs.css
+	./node_modules/.bin/csslint --quiet --format=compact --errors=$(ERRORS) --warnings=$(CSS_WARNINGS) css/basic.css css/cat-docs.css
 
 node_modules node_modules/.CURRENT: package.json package-lock.json
 	npm install

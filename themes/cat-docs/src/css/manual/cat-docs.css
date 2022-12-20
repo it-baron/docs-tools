@@ -9,7 +9,7 @@
  *
  */
 @import url("bootstrap-custom.css");
-@import url("icomoon.css");
+@import url("exo2.css");
 @import url("../colors.css");
 
 @import url("../auth-table.css");
@@ -190,12 +190,12 @@ a.reference.external:after {
 }
 
 
-a.external[href^='https://docs.mongodb.com']:after { 
-    display: none; 
+a.external[href^='https://docs.mongodb.com']:after {
+    display: none;
 }
 
-a.external[href^='https://www.mongodb.com/docs']:after { 
-    display: none; 
+a.external[href^='https://www.mongodb.com/docs']:after {
+    display: none;
 }
 
 div.body li {

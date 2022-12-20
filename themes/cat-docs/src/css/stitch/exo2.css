@@ -1,16 +1,12 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('//media.mongodb.org/fonts/icomoon.eot?qcwgdc');
-	src:url('//media.mongodb.org/fonts/icomoon.eot?#iefixqcwgdc') format('embedded-opentype'),
-		url('//media.mongodb.org/fonts/icomoon.ttf?qcwgdc') format('truetype'),
-		url('//media.mongodb.org/fonts/icomoon.woff?qcwgdc') format('woff'),
-		url('//media.mongodb.org/fonts/icomoon.svg?qcwgdc#icomoon') format('svg');
+	font-family: 'Exo+2';
+	src:url('//fonts.googleapis.com/css?family=Exo+2');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class*="icon-"] {
-	font-family: 'icomoon';
+	font-family: 'Exo+2';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
