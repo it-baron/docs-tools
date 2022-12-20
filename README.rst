@@ -15,17 +15,26 @@ documentation project.
 
 This document explains the components and operations of the build
 system, and serves as a guide for anyone who wants to maintain a
-MongoDB Documentation-like project. 
+MongoDB Documentation-like project.
 
 Installation
 ------------
 
-To install giza, refer to the `installation guide 
+To install giza, refer to the `installation guide
 <https://docs.mongodb.com/meta/tutorials/install/>`_ on the MongoDB meta site
 to help you get started.
 
 Components
 ----------
+
+``giza``
+~~~~~~~~
+MongoDB's legacy toolchain that extends Sphinx.
+
+
+``pharaoh`` (Pharaoh)
+~~~~~~~~~~~~
+Translation pipeline
 
 ``sphinxext`` (Sphinx)
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -35,7 +44,7 @@ extensions, required for producing and referencing MongoDB
 documentation projects. This includes the extensions for the MongoDB
 Domain to cross reference MongoDB objects (database commands, shell
 methods, database output, etc.) as well as custom admonition and
-directive types. 
+directive types.
 
 ``themes`` (Sphinx)
 ~~~~~~~~~~~~~~~~~~~
@@ -58,9 +67,3 @@ data used to define testable situations.
 The scripts in the ``bin`` directory include common components and
 logic shared between bootstrapping operations, fabric scripts, and
 meta-build scripts.
-
-``giza``
-~~~~~~~~
-
-MongoDB's legacy toolchain that extends Sphinx.
-
