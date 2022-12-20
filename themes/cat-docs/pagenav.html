@@ -1,7 +1,12 @@
 <a href="javascript:void(0)" class="closeNav" id="closeNav">Close &times;</a>
 
+
 <h3>
-  <a href="{{ pathto('index') }}">{{ shorttitle }}</a>
+  <a class="index-link" href="{{ pathto('index') }}">{{ shorttitle }}</a>
 </h3>
 
-{{ version_selector() }} {{ toctree( collapse=false, titles_only=1) }}
+{% if project != 'mongodb-meta' %}{{ version_selector() }}{% endif %}
+
+{{ toctree( collapse=false, titles_only=1) }}
+
+
