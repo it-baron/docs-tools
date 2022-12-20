@@ -1,0 +1,44 @@
+@import '../colors';
+@import 'bem-components/navbar';
+@import 'bem-components/navbar-brand';
+@import 'bem-components/navbar-seperator';
+@import 'bem-components/navbar-dropdown';
+@import 'bem-components/navbar-links';
+@import 'bem-components/navbar-download';
+@import 'bem-components/navbar-search';
+@import 'bem-components/spinner';
+
+@import 'bem-components/menu';
+@import 'bem-components/submenu';
+
+@import 'search';
+@import 'constants';
+
+/* hide the links on small screens */
+@media (max-width: 1200px) {
+  .navbar-links,
+  .navbar-download,
+  #gsearch {
+    display: none;
+  }
+}
+
+img.hide-medium-and-up,
+img.show-medium-and-up {
+  max-width: 100%;
+}
+
+.hide-medium-and-up {
+    display: none !important;
+}
+.show-medium-and-up {
+    display: block !important;
+}
+@media (max-width: 767px) {
+    .hide-medium-and-up {
+        display: block !important;
+    }
+    .show-medium-and-up {
+        display: none !important;
+    }
+}
