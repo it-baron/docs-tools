@@ -10,6 +10,7 @@
  */
 @import url("bootstrap-custom.css");
 @import url("exo2.css");
+@import url("icomoon.css");
 @import url("../colors.css");
 
 @import url("../auth-table.css");
@@ -70,7 +71,7 @@
 }
 
 body {
-    font-family: "Exo+2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #494747;
@@ -80,7 +81,7 @@ body {
 hr { border: 1px solid #1a1b1c; }
 
 .content {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
 }
 
@@ -122,7 +123,7 @@ a:hover {
 }
 
 div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
-    font-family: "Exo+2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
     line-height: 24px;
     color: #313030;
@@ -1615,8 +1616,8 @@ table.compatibility, table.compatibility-large{
     border-collapse: collapse;
     color: rgb(73,71,71);
     display: table-cell;
-    font-family: "Exo+2", 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-family: "Exo 2", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
     width: 100%;
     vertical-align: middle;
 }
