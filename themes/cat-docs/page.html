@@ -1,0 +1,56 @@
+{%- extends "layout.html" -%}
+
+{%- block htmltitle %}
+  {%- if not embedded and docstitle %}
+    {%- set titlesuffix = " &mdash; "|safe + docstitle|e  %}
+  {%- else %}
+    {%- set titlesuffix = "" %}
+  {%- endif -%}
+
+  <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+{%- endblock -%}
+
+{%- block metadescription %}{%- endblock -%}
+
+
+{%- block canonicalref %}
+    {%- if pagename == 'index' %}
+      <link rel="canonical" href="{{theme_base_url}}/{{theme_project}}/" />
+    {%- else %}
+      <link rel="canonical" href="{{theme_base_url}}/{{theme_project}}/{{pagename}}/" />
+    {%- endif -%}
+{%- endblock -%}
+
+{%- block alertbar -%}
+    {{ super() }}
+{%- endblock -%}
+
+{%- block righttoc %} {% endblock %}
+{%- block adblockheader %}
+    {%- include "adblock-header.html" %}
+{%- endblock -%}
+
+{%- block adblock %}
+    {%- include "adblock.html" %}
+{%- endblock -%}
+
+{%- block sitesearch %}
+  {%- if builder != 'singlehtml' %}
+      <script>
+        window.googleSearchCx = "017213726194841070573:WMX6838984"
+	window.googleSearchPlaceholder = "Search Documentation"
+        window.googleSearchResultsUrl = "{{theme_base_url}}/manual/search/"
+      </script>
+  {%- endif %}
+{%- endblock -%}
+
+
+{%- block header %}
+<div id="navbar" data-navprops='{"links": [{"url": "{{theme_base_url}}/manual/","text": "Server","active": true},{"url": "{{theme_base_url}}/drivers/","text": "Drivers"},{"url": "{{theme_base_url}}/cloud/","text": "Cloud"},{"url": "{{theme_base_url}}/tools/","text": "Tools"},{"url": "{{theme_base_url}}/guides/","text": "Guides"}], "baseUrl": "{{theme_base_url}}"}'></div>
+{%- endblock %}
+
+{%- block pdflink %}{%- endblock %}
+
+{%- block epublink %}<li><a href="{{ theme_epubpath }}" target="_blank" rel="nofollow">EPUB</a></li>{%- endblock %}
+
+{%- block langauge_selector %}{%- endblock -%}
