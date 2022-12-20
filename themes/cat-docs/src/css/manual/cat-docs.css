@@ -67,7 +67,7 @@
     height: 100%;
     z-index: 2000;
     opacity: 0.5;
-    background: url(https://media.mongodb.org/24px-baseline-overlay.png) 0 0 repeat;
+    background-color: #eee;
 }
 
 body {
@@ -171,7 +171,7 @@ div.body h1 + dl, div.body h2 + dl, div.body h3 + dl,  div.body h4 + dl {
 }
 
 a.headerlink {
-    color: var(--mongodb-green);
+    color: var(--primary);
     font-size: 0.8em;
     padding: 0 4px 0 4px;
     text-decoration: none;
@@ -188,15 +188,6 @@ a.reference.external:after {
     content: var(--external-link);
     padding-left: 3px;
     vertical-align: middle;
-}
-
-
-a.external[href^='https://docs.mongodb.com']:after {
-    display: none;
-}
-
-a.external[href^='https://www.mongodb.com/docs']:after {
-    display: none;
 }
 
 div.body li {
@@ -378,17 +369,6 @@ table.no-outer-border  {
    border-style: hidden;
 }
 
-div#mongodb ul {
-    list-style: none;
-    padding-left:0px;
-    padding-right:1em;
-}
-div#mongodb ul.simple {
-    list-style:circle;
-    margin-top: 0px;
-    padding-left:0px;
-}
-
 div.related li.right {
     float: right;
     margin-right: 5px;
@@ -398,7 +378,7 @@ div.related li.right {
 #main-db {
     padding-top: 2.5em;
     padding-bottom: 2em;
-    background-image: url(https://media.mongodb.org/back-body.png);
+    background-color: #fefefe;
     background-repeat: repeat-x;
 }
 
@@ -413,7 +393,6 @@ div#top-right ul#header-menu-bar {
     margin-top: 0;
     padding-left: 20px;
     height: 38px;
-    background-image: url(https://media.mongodb.org/trans-user-left.png);
     background-repeat: no-repeat;
 }
 
@@ -424,7 +403,6 @@ div#top-right div.user-right  {
     margin: 0;
     padding: 0 20px 0 0;
     font-size: 10pt;
-    background-image: url(https://media.mongodb.org/trans-user-right.png);
     background-position: top right;
     background-repeat: no-repeat;
 }
@@ -433,7 +411,6 @@ div#top-right div.user-right li.normal {
     float: left;
     padding: 8px 1em 0 0;
     height: 38px;
-    background-image: url(https://media.mongodb.org/trans-user-back.png);
     background-repeat: repeat-x;
     list-style-type: none;
     font-size: 10pt;
@@ -547,7 +524,7 @@ div.section > h1 + dl.projection > dt {display: none;}
 }
 
 div.highlight pre {
-    background: #f5f6f7 url(https://media.mongodb.org/code-block-bg.png) 0 0 repeat;
+    background-color: #f5f6f7;
     border-radius: 0;
     border: none;
     border-left: 5px solid #494747;
@@ -562,7 +539,7 @@ div.highlight pre {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     div.highlight pre {
-        background: #f5f6f7 url(https://media.mongodb.org/code-block-bg@2x.png) 0 0 repeat;
+        background-color: #f5f6f7;
         background-size: 12px 12px;
     }
 }
@@ -630,7 +607,7 @@ table.docutils div.admonition {
 /* Code blocks in table cells don't have a background image (see "inherit" in previous rule)*/
 /* This restores the regular code block background when nested in an admonition in a table */
     & div.highlight pre, div.button-row {
-        background: #f5f6f7 url(https://media.mongodb.org/code-block-bg.png) 0 0 repeat;
+        background-color: #f5f6f7;
     }
 }
 
@@ -926,10 +903,10 @@ a.twitter-icon, a.youtube-icon, a.facebook-icon, a.stack-overflow-icon, a.slack-
     margin-top: 70px;
     text-align: center;
     border-radius: 3px;
-    background-color: var(--mongodb-green);
+    background-color: var(--primary);
     color: white;
     left: 30px;
-    border: 1.5px solid var(--mongodb-green);
+    border: 1.5px solid var(--primary);
     padding: 5px 10px;
     transform: rotate(90deg);
     transform-origin: left top 0;
@@ -960,7 +937,7 @@ a.twitter-icon, a.youtube-icon, a.facebook-icon, a.stack-overflow-icon, a.slack-
 }
 
 div.sphinxsidebar {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     top: 0; /* the height of the navbar */
     bottom: 0;
@@ -1016,12 +993,12 @@ div.sphinxsidebar h3 a.showlink {
 }
 
 .sphinxsidebarwrapper .toctree-l1 li.current.selected-item > a span {
-    color: var(--mongodb-green);
+    color: var(--primary);
 }
 .sphinxsidebarwrapper .toctree-l1 li.current.selected-item > a {
-    color: var(--mongodb-green);
+    color: var(--primary);
     background-color: #f5f6f7;
-    border-right: 5px solid var(--mongodb-green);
+    border-right: 5px solid var(--primary);
 }
 .expand-icon {
     background-image: url(images/page-icon.png);
