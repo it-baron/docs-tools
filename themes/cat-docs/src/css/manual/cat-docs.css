@@ -716,7 +716,7 @@ div.versionadded > p > span, div.versionchanged > p > span, div.deprecated > p >
 .content {
     box-sizing: border-box;
     display: flex;
-    margin: 45px auto 0;
+    margin: 0;
 }
 
 .content .main-column {
