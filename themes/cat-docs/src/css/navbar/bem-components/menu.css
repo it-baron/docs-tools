@@ -14,7 +14,7 @@
 
     &--secondary {
       a {
-        color: var(--mongodb-green) !important;
+        color: var(--primary) !important;
       }
     }
 

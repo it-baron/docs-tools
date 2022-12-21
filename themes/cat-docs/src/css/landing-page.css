@@ -30,7 +30,7 @@
 
   text-decoration: none;
   color: #000;
-  &:hover { box-shadow: 0 10px 12px 1px rgba(0,0,0,.1); color: var(--mongodb-green); text-decoration: none; }
+  &:hover { box-shadow: 0 10px 12px 1px rgba(0,0,0,.1); color: var(--primary); text-decoration: none; }
   &:focus { color: inherit; text-decoration: none; }
   &:active { color: var(--light-grey-green); text-decoration: none; }
 
@@ -96,7 +96,7 @@
   }
   &:active {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
-    border-left: 10px solid var(--mongodb-green);
+    border-left: 10px solid var(--primary);
   }
 
   & .card-content {

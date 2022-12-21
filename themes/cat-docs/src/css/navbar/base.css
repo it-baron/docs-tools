@@ -83,7 +83,7 @@ button {
 }
 
 a {
-  color: var(--mongodb-green);
+  color: var(--primary);
   transition-duration: .4s;
 
   &:hover {

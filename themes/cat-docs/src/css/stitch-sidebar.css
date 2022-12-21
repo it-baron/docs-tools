@@ -114,12 +114,12 @@ div.sphinxsidebarwrapper > ul.toctree-root {
     }
 
     & li.selected-item-root h3.toc-section-heading {
-        color: var(--mongodb-green);
+        color: var(--primary);
         font-weight: bold !important;
     }
 
     & li>a.current {
-        color: var(--mongodb-green);
+        color: var(--primary);
     }
 
     & ul {

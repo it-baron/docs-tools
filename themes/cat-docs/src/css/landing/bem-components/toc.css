@@ -35,9 +35,9 @@
     }
 
     &--active {
-      color: var(--mongodb-green);
+      color: var(--primary);
       background-color: var(--light-grey-secondary);
-      border-right: 5px solid var(--mongodb-green);
+      border-right: 5px solid var(--primary);
 
       &::before {
         background-image: url('/images/icons.svg');

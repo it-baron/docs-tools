@@ -11,7 +11,7 @@
   }
 
   &__title {
-    color: var(--mongodb-green);
+    color: var(--primary);
 
     &:not(:last-child) {
       margin-bottom: 5px;
@@ -20,7 +20,7 @@
 
   &__link {
     text-decoration: none;
-    color: var(--mongodb-green);
+    color: var(--primary);
 
     /* Remove the margin on the last accordion element, fixes animation jumping */
     &:last-child :last-child {

@@ -27,12 +27,12 @@
     }
 
     &:hover {
-      color: var(--mongodb-green);
+      color: var(--primary);
       text-decoration: none;
     }
 
     &--active {
-      color: var(--mongodb-green);
+      color: var(--primary);
 
       &:hover {
         color: var(--green-secondary);
@@ -44,7 +44,7 @@
       }
 
       &::after {
-        background-color: var(--mongodb-green);
+        background-color: var(--primary);
         bottom: 0;
         content: '';
         height: 4px;

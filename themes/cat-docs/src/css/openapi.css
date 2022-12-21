@@ -79,7 +79,7 @@
 }
 
 .apiref-resource__parameter-optional-flag::before {
-    color: var(--mongodb-green);
+    color: var(--primary);
     content: "optional";
     font-size: 10px;
     font-style: italic;

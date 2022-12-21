@@ -1973,7 +1973,7 @@ fieldset[disabled] .btn-danger.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: var(--mongodb-green);
+  background-color: var(--primary);
   border-color: var(--fern);
 }
 .btn-success:hover,
@@ -1982,7 +1982,7 @@ fieldset[disabled] .btn-danger.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: var(--mongodb-green);
+  background-color: var(--primary);
   border-color: var(--fern);
 }
 .btn-success:active,

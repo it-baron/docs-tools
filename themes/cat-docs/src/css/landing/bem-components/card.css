@@ -52,7 +52,7 @@
   }
 
   &__title {
-    color: var(--mongodb-green);
+    color: var(--primary);
     margin-bottom: 10px;
     margin-left: 40px;
   }

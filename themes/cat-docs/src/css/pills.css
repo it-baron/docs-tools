@@ -30,6 +30,6 @@
 .guide__pill:hover,
 .guide__pill--active,
 .guide__pill--seeall {
-    background-color: var(--mongodb-green);
+    background-color: var(--primary);
     color: #fff;
 }

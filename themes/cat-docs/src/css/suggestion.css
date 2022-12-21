@@ -1,5 +1,5 @@
 .suggestion {
-  background-color: var(--mongodb-green);
+  background-color: var(--primary);
   bottom: 30%;
   font-family: inherit;
   overflow-x: hidden;

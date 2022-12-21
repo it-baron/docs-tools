@@ -4,7 +4,7 @@
   padding-right: 40px;
 
   &__text {
-    color: var(--mongodb-green);
+    color: var(--primary);
     display: inline-block;
     font-family: Akzidenz;
     font-size: 12px;

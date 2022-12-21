@@ -96,7 +96,7 @@
 }
 
 .guide-category:nth-of-type(3n+1) .guide:hover {
-    border-left-color: var(--mongodb-green);
+    border-left-color: var(--primary);
 }
 
 /* Second */
@@ -121,7 +121,7 @@
 }
 
 .guide--regular:hover > .guide__title {
-    color: var(--mongodb-green);
+    color: var(--primary);
 }
 
 .guide__body {
@@ -150,7 +150,7 @@
     color: #666965;
 
     &:hover {
-        color: var(--mongodb-green);
+        color: var(--primary);
     }
 
     &:last-child {

@@ -40,12 +40,12 @@
 .tab-strip__element[aria-selected=true],
 .tab-strip__element[aria-selected=true]:focus,
 .tab-strip__element[aria-selected=true]:hover {
-    color: var(--mongodb-green);
+    color: var(--primary);
     font-weight: bold;
     background-color: #fff;
     border: 0.5px solid #babdbe;
     border-bottom-color: transparent;
-    border-top-color: var(--mongodb-green);
+    border-top-color: var(--primary);
     border-top-width: 4px;
 }
 
@@ -61,8 +61,8 @@
 .tab-strip__element[aria-selected=true] > .caret,
 .tab-strip__element[aria-selected=true]:focus > .caret,
 .tab-strip__element[aria-selected=true]:hover > .caret {
-    border-top-color: var(--mongodb-green);
-    border-bottom-color: var(--mongodb-green);
+    border-top-color: var(--primary);
+    border-bottom-color: var(--primary);
 }
 
 .tab-strip__element[aria-selected=true] > .caret,
@@ -78,9 +78,8 @@
      background-color: #fff;
 }
 
-/*Dropdown hover highlight mongo green*/
 .tab-strip__dropdown > li:hover {
-     background-color: var(--mongodb-green);
+     background-color: var(--primary);
 }
 
 /*White background for dropdown items*/

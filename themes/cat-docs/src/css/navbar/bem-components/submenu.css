@@ -59,7 +59,7 @@
     transition: opacity .2s ease-in-out;
 
     &--secondary {
-      color: var(--mongodb-green);
+      color: var(--primary);
     }
 
     a {

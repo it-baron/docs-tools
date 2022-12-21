@@ -76,9 +76,9 @@ h2::before {
 
 .left-toc > ul > li > ul > li {
     &:matches(.active, :hover) {
-        color: var(--mongodb-green);
+        color: var(--primary);
         background-color: #f5f6f7;
-        border-right: 3px solid var(--mongodb-green);
+        border-right: 3px solid var(--primary);
     }
 
     & > a {
@@ -103,7 +103,7 @@ h2::before {
 }
 
 .left-toc > ul > li > ul > li:matches(.active, :hover) a {
-    color: var(--mongodb-green);
+    color: var(--primary);
 }
 
 .left-toc ul > li {
@@ -171,11 +171,11 @@ h2::before {
 }
 
 .breadcrumbs__bc > a {
-    color: var(--mongodb-green);
+    color: var(--primary);
 }
 
 .show-current-language {
-    color: var(--mongodb-green);
+    color: var(--primary);
 }
 
 .show-current-deployment {
