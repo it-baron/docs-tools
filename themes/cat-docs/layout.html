@@ -177,12 +177,16 @@ version_selector() %}
 
       {%- block metadescription %}{%- endblock -%} {{ metatags }} {{ css() }}
       {%- if not embedded %} {{ script() }}
-        {%- block googlecse_opensearch %}
-      {%- endblock -%} {%- if favicon %}
 
+      {%- if favicon %}
       <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
-      {%- endif %} {%- endif %} {%- block linktags %} {%- include
-      "linktags.html" %} {%- endblock -%} {%- block extrahead %}{% endblock -%}
+      {%- endif %}
+
+      {%- endif %}
+
+      {%- block linktags %}
+
+      {%- include "linktags.html" %} {%- endblock -%} {%- block extrahead %}{% endblock -%}
       {%- block adblockheader %}{%- endblock -%}
     </head>
     <body
@@ -229,16 +233,14 @@ version_selector() %}
 
           {% block alertbar %} {%- if theme_eol %}
           <div class="alert alert-warning">
-            <span class="alert-message">
-              This version of the documentation is archived and no longer
+            <span class="alert-message">This version of the documentation is archived and no longer
               supported.{%- if theme_eol_remove %} It will be removed on {{
-              theme_eol_date }}.{% endif %}{% if theme_eol_upgrade_url %}
-            </span>
+              theme_eol_date }}.{% endif %}</span>
           </div>
           {%- elif theme_is_upcoming %}
           <div class="alert alert-info">
-            <span class="alert-message">
-              This manual pertains to an upcoming release, and is made
+            <span class="alert-message"
+              >This manual pertains to an upcoming release, and is made
               available for testing purposes only.</span
             >
           </div>
@@ -246,7 +248,7 @@ version_selector() %}
           <div class="alert alert-info">
             <span class="alert-message">{{theme_banner_msg}}</span>
           </div>
-          {%- endif %} {%- block content %}
+          {%- endif %} {% endblock %} {%- block content %}
           <div class="document">
             {%- block document %}
             <div class="documentwrapper">
@@ -287,14 +289,12 @@ version_selector() %}
             {%- endif %} {%- endif %} {%- endblock %} {%- block adblock %}{%
             endblock %} {%- block social %}
             <div class="social">
-
               <a
                 class="twitter-icon"
                 href="https://twitter.com/ctlst_tech"
                 title="https://twitter.com/ctlst_tech"
                 ><i class="fab fa-twitter-square"></i
               ></a>
-
             </div>
             {% endblock %}
           </div>
