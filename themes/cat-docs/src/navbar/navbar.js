@@ -160,14 +160,10 @@ class Navbar extends preact.Component {
         function NavbarDownloadButton() {
             const dataProject = document.body.getAttribute('data-project');
             const dataProjectIsAtlas = dataProject === 'atlas';
-            const linkText = dataProjectIsAtlas ? 'Deploy a free cluster' : 'Get MongoDB';
-            const linkUrl = 'https://www.mongodb.com/download-center?tck=docs_navbar';
-            const linkIcon = dataProjectIsAtlas ? <RocketDownloadIcon /> : '';
+
 
             return (
                 <div className="navbar-download">
-                    <a href={ linkUrl } className="navbar-download__text">{ linkText }</a>
-                    { linkIcon }
                 </div>
             );
         }
@@ -186,9 +182,6 @@ class Navbar extends preact.Component {
         return (
             <nav className="navbar">
                 <div className="navbar__left">
-                    <a href="https://www.mongodb.com/">
-                        <img src="https://snooty-koueq.mongodbstitch.com/logo-mongodb.png" className="navbar-brand" alt="MongoDB Logo" />
-                    </a>
 
                     <span className="navbar-seperator"></span>
 
@@ -213,4 +206,4 @@ Navbar.propTypes = {
 };
 
 const navbar = document.getElementById('navbar');
-preact.render(<Navbar {...(navbar.dataset)} />, navbar);
+preact.render(<Navbar {...(navbar ? navbar.dataset : null)} />, navbar);
