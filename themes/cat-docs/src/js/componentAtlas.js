@@ -1,4 +1,4 @@
-const HTML = ``;
+const HTML = '';
 
 export function setup() {
     const newElement = document.createElement('div');
