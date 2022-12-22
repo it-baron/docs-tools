@@ -113,7 +113,10 @@ version_selector() %}
 
 {%- macro css() %}
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
 
 {%- for cssfile in css_files %}
   <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
