@@ -323,11 +323,19 @@ version_selector() %}
         <div class="clearfix"></div>
       </div>
 
-      {%- block header %} {%- if not theme_eol -%}
-      <!-- <div id="navbar" data-navprops='{"links": [{"url": "{{theme_base_url}}/manual/","text": "Server"},{"url": "{{theme_base_url}}/ecosystem/drivers/","text": "Drivers"},{"url": "{{theme_base_url}}/cloud/","text": "Cloud"},{"url": "{{theme_base_url}}/tools/","text": "Tools"},{"url": "{{theme_base_url}}/guides/","text": "Guides","active": true}], "baseUrl": "{{theme_base_url}}"}'></div> -->
-      {%- endif -%} {%- endblock %} {% block navbar %} {%- if not theme_eol -%}
-      <script src="{{ pathto('_static/navbar.min.js', 1) }}"></script>
-      {%- endif -%} {% endblock %} {% block onboarding_modal %}{% endblock %}
+      {%- block header %}
+        {%- if not theme_eol -%}
+        <!-- <div id="navbar" data-navprops='{"links": [{"url": "{{theme_base_url}}/manual/","text": "Server"},{"url": "{{theme_base_url}}/ecosystem/drivers/","text": "Drivers"},{"url": "{{theme_base_url}}/cloud/","text": "Cloud"},{"url": "{{theme_base_url}}/tools/","text": "Tools"},{"url": "{{theme_base_url}}/guides/","text": "Guides","active": true}], "baseUrl": "{{theme_base_url}}"}'></div> -->
+        {%- endif -%}
+      {%- endblock %}
+
+      {% block navbar %}
+        {%- if not theme_eol -%}
+          <!-- <script src="{{ pathto('_static/navbar.min.js', 1) }}"></script> -->
+        {%- endif -%}
+      {% endblock %}
+
+      {% block onboarding_modal %}{% endblock %}
       {%- block versionnav %}
 
       <script type="text/javascript">
