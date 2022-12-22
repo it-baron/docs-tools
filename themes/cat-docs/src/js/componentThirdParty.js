@@ -29,7 +29,9 @@ export function setup(fastNav) {
 
     // Update our path. We're not using Gatsby, but this is the event name that was already in use.
     try {
-        window.dataLayer.push({event: 'gatsby-route-change'});
+        if(window.dataLayer) {
+            window.dataLayer.push({event: 'gatsby-route-change'});
+        }
     } catch (err) {
         console.error('Error updating route:', err);
     }

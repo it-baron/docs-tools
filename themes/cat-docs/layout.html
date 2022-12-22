@@ -202,7 +202,12 @@
         content="https://github.com/{{ github_organization }}/{{theme_repo_name}}/blob/{{theme_branch}}/source/{{pagename}}.txt"
       />
 
-      {%- block metadescription %}{%- endblock -%} {{ metatags }} {{ css() }}
+      {%- block metadescription %}
+      {%- endblock -%}
+
+      {{ metatags }}
+      {{ css() }}
+
       {%- if not embedded %} {{ script() }}
 
       {%- if favicon %}
@@ -224,7 +229,8 @@
       data-eol="{{theme_eol}}"
     >
 
-      {%- block sitesearch %}{%- endblock -%}
+      {%- block sitesearch %}
+      {%- endblock -%}
 
       <div class="content" {% if theme_eol %}style="margin-top: 0;" {% endif %}>
         <div id="left-column">
