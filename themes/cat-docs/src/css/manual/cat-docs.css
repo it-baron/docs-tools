@@ -482,8 +482,9 @@ code, code span.pre {
 }
 tt.descname, tt.descclassname,
 code.descname, code.descclassname {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
+    color: var(--primary);
 }
 
 dl.method dt {
@@ -1681,4 +1682,22 @@ ul.simple li:before {
   content: '-';
   position: absolute;
   left: 0;
+}
+
+dl.file > * > dd > em {
+    display: block;
+    font-style: normal;
+    margin-left: 14px;
+    font-size: 0.9em;
+}
+
+dl.file > * > em {
+    font-style: normal;
+    font-family: 'Exo 2';
+}
+
+dl.function > dt {
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+    font-size: 14px;
 }
