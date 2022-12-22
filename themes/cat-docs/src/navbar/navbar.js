@@ -206,4 +206,4 @@ Navbar.propTypes = {
 };
 
 const navbar = document.getElementById('navbar');
-preact.render(<Navbar {...(navbar ? navbar.dataset : null)} />, navbar);
+preact.render(<Navbar {...(navbar ? navbar.dataset : '{}')} />, navbar);
