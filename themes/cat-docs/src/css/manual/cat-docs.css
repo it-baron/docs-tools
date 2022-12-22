@@ -1317,15 +1317,15 @@ div.admonition {
 .admonition.tip,
 .admonition.admonition-tip,
 .admonition.note, .admonition-instructor {
-    background-color: rgba(255, 100, 6, 0.03);
-    border-color: var(--leaf);
+    background-color: #E7F6ED;
+    border-color: var(--note-fg);
 }
 
 .admonition.admonition-platform-support .admonition-title,
 .admonition.tip .admonition-title,
 .admonition.note .admonition-title,
 .admonition-instructor .admonition-title {
-    color: var(--leaf);
+    color: var(--note-fg);
 }
 
 .admonition.important {

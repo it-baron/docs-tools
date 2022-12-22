@@ -1,4 +1,5 @@
 :root {
+
   --gray-dark3: #21313C;
   --gray-dark2: #3D4F58;
   --gray-dark1: #5D6C74;
@@ -8,10 +9,15 @@
   --gray-light3: #F9FBFA;
 
   /* "Primary Palette" (retrieved April 2019) */
+  /* --leaf: rgba(255, 100, 6, 0.6);
+  --fern: rgba(255, 100, 6, 0.4);
+  --forest: rgba(255, 100, 6, 0.2); */
   --primary: rgba(255, 100, 6, 0.8);
+  --note-fg: #13aa52;
+  --note-bg: #12924f;
   --leaf: rgba(255, 100, 6, 0.6);
   --fern: rgba(255, 100, 6, 0.4);
-  --forest: rgba(255, 100, 6, 0.2);
+  --forest: #116149;
   --fog: #b8c4c2;
   --graphite: #21313c;
   --white: #fefefe;
