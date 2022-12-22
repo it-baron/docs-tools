@@ -99,8 +99,11 @@ version_selector() %}
 {%- endmacro %} {%- macro sidebar() %}
 <div class="sphinxsidebar" id="sphinxsidebar">
   <div id="sphinxsidebarwrapper" class="sphinxsidebarwrapper">
-    {%- if sidebars != None %} {%- for sidebartemplate in sidebars %} {%-
-    include sidebartemplate %} {%- endfor %} {%- endif %}
+    {%- if sidebars != None %}
+      {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+      {%- endfor %}
+    {%- endif %}
   </div>
 </div>
 {%- endmacro -%}
