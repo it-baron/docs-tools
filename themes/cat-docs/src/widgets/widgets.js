@@ -42,22 +42,23 @@ class Widgets extends preact.Component {
     }
 
     render() {
-        return (
-            <div>
-                <Deluge
-                    project={this.props.project}
-                    path={this.props.path}
-                    handleOpenDrawer={this.handleOpenDrawer}
-                    canShowSuggestions={this.isSuggestionPage}
-                />
-                {this.isSuggestionPage &&
-                    <Suggestion
-                        drawerIsOpen={this.state.drawerIsOpen}
-                        handleCloseDrawer={this.handleCloseDrawer}
-                    />
-                }
-            </div>
-        );
+        return null;
+        // return (
+        //     <div>
+        //         <Deluge
+        //             project={this.props.project}
+        //             path={this.props.path}
+        //             handleOpenDrawer={this.handleOpenDrawer}
+        //             canShowSuggestions={this.isSuggestionPage}
+        //         />
+        //         {this.isSuggestionPage &&
+        //             <Suggestion
+        //                 drawerIsOpen={this.state.drawerIsOpen}
+        //                 handleCloseDrawer={this.handleCloseDrawer}
+        //             />
+        //         }
+        //     </div>
+        // );
     }
 }
 
