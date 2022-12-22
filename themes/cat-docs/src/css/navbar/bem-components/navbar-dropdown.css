@@ -7,7 +7,7 @@
   user-select: none;
 
   &:hover {
-    color: var(--mongodb-green);
+    color: var(--primary);
   }
 
   &::after {

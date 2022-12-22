@@ -3,7 +3,6 @@ code-blocks with the :linenos: options render an html table, unlike
 regular code-blocks. This component moves the button row into a new row
 of the html table to fix the visual alignment.
 
-https://jira.mongodb.org/browse/DOCSP-2064
 */
 
 function isLineNumberBlock(block) {
@@ -43,7 +42,7 @@ function moveButtonRowBelowCaption(block) {
     const buttonRow = block.getElementsByClassName('button-row')[0];
     const caption = block.getElementsByClassName('code-block-caption')[0];
 
-    console.log('MOVING BELOW CAPTION');
+    // console.log('MOVING BELOW CAPTION');
 
     // Manipulate the DOM
     caption.parentNode.insertBefore(buttonRow, caption.nextSibling);

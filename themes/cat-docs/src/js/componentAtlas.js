@@ -1,9 +1,4 @@
-const HTML = `<p class="first admonition-title">AWS USERS</p>
-<p class="last">Welcome AWS Users! <a class="reference external" href="https://www.mongodb.com/cloud/atlas?tck=docs">MongoDB Atlas</a> is
-the fully-managed database-as-a-service with all the features and
-performance of MongoDB. Atlas runs on AWS, Azure, and GCP. To
-explore Atlas, use the promotional code <code class="docutils literal notranslate"><span class="pre">REALMONGO</span></code> for 250 USD of
-Atlas credit.</p>`;
+const HTML = ``;
 
 export function setup() {
     const newElement = document.createElement('div');

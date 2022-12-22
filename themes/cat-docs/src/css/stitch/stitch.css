@@ -66,11 +66,11 @@
     height: 100%;
     z-index: 2000;
     opacity: 0.5;
-    background: url(https://media.mongodb.org/24px-baseline-overlay.png) 0 0 repeat;
+    background-color: #fefefe;
 }
 
 body {
-    font-family: "Akzidenz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #494747;
@@ -203,7 +203,7 @@ div.section h4+ul {
 }
 
 a.headerlink {
-    color: var(--mongodb-green);
+    color: var(--primary);
     font-size: 0.8em;
     padding: 0 4px 0 4px;
     text-decoration: none;
@@ -448,7 +448,7 @@ div.related li.right {
 #main-db {
     padding-top: 2.5em;
     padding-bottom: 2em;
-    background-image: url(https://media.mongodb.org/back-body.png);
+
     background-repeat: repeat-x;
 }
 
@@ -463,7 +463,7 @@ div#top-right ul#header-menu-bar {
     margin-top: 0;
     padding-left: 20px;
     height: 38px;
-    background-image: url(https://media.mongodb.org/trans-user-left.png);
+
     background-repeat: no-repeat;
 }
 
@@ -474,7 +474,7 @@ div#top-right div.user-right {
     margin: 0;
     padding: 0 20px 0 0;
     font-size: 10pt;
-    background-image: url(https://media.mongodb.org/trans-user-right.png);
+
     background-position: top right;
     background-repeat: no-repeat;
 }
@@ -483,7 +483,7 @@ div#top-right div.user-right li.normal {
     float: left;
     padding: 8px 1em 0 0;
     height: 38px;
-    background-image: url(https://media.mongodb.org/trans-user-back.png);
+
     background-repeat: repeat-x;
     list-style-type: none;
     font-size: 10pt;
@@ -649,7 +649,7 @@ div.section>h1+dl.projection>dt {
 }
 
 div.highlight pre {
-    background: #f5f6f7 url(https://media.mongodb.org/code-block-bg.png) 0 0 repeat;
+    background-color: #f5f6f7;
     border-radius: 0;
     border: none;
     border-left: 5px solid #494747;
@@ -664,7 +664,7 @@ div.highlight pre {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     div.highlight pre {
-        background: #f5f6f7 url(https://media.mongodb.org/code-block-bg@2x.png) 0 0 repeat;
+        background-color: #f5f6f7;
         background-size: 12px 12px;
     }
 }
@@ -727,7 +727,7 @@ table.docutils div.admonition {
     /* This restores the regular code block background when nested in an admonition in a table */
     & div.highlight pre,
     div.button-row {
-        background: #f5f6f7 url(https://media.mongodb.org/code-block-bg.png) 0 0 repeat;
+        background-color: #f5f6f7;
     }
 }
 

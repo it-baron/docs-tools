@@ -4,8 +4,8 @@ const LOCALSTORAGE_KEY_LOCAL = 'uriwriter_local';
 const LOCALSTORAGE_KEY_ATLAS = 'uriwriter_atlas';
 const LOCALSTORAGE_KEY_CURRENT_STATE = 'uriwriter_currentstate';
 
-const TEMPLATE_TYPE_SELF_MANAGED = 'local MongoDB';
-const TEMPLATE_TYPE_REPLICA_SET = 'local MongoDB with replica set';
+const TEMPLATE_TYPE_SELF_MANAGED = 'local';
+const TEMPLATE_TYPE_REPLICA_SET = 'local with replica set';
 const TEMPLATE_TYPE_ATLAS_36 = 'Atlas (Cloud) v. 3.6';
 const TEMPLATE_TYPE_ATLAS_34 = 'Atlas (Cloud) v. 3.4';
 const TEMPLATE_TYPE_ATLAS = 'Atlas (Cloud)';
