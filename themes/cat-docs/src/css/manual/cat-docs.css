@@ -1668,3 +1668,14 @@ table.compatibility-large th:nth-child(1){
 .alert-info {
   margin-bottom: 40px;
 }
+
+ul.simple li {
+  padding-left: 1em;
+  position: relative;
+}
+
+ul.simple li:before {
+  content: '-';
+  position: absolute;
+  left: 0;
+}

@@ -284,7 +284,7 @@ p.sidebar-title {
 /* -- topics ---------------------------------------------------------------- */
 
 div.topic {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 7px 7px 0 7px;
     margin: 10px 0 10px 0;
 }
