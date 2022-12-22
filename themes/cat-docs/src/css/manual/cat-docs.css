@@ -1672,6 +1672,7 @@ table.compatibility-large th:nth-child(1){
 ul.simple li {
   padding-left: 1em;
   position: relative;
+  list-style: none;
 }
 
 ul.simple li:before {
