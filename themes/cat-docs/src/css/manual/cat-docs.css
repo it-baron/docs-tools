@@ -274,6 +274,7 @@ div td pre {
 }
 
 table.docutils {
+    width: 100%;
     margin: 24px 0;
     font-size: 14px;
     line-height: 24px;
@@ -500,6 +501,7 @@ dl.method > dt em {
    font-weight: 700;
    font-style: normal;
 }
+div.section { margin-top: 32px; }
 div.section > h1 + dl.dbcommand > dt {display: none;}
 div.section > h1 + dl.operator > dt {display: none;}
 div.section > h1 + dl.method > dt {display: none;}
