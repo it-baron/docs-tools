@@ -1221,7 +1221,7 @@ div.sphinxsidebarwrapper div.idxcontents {
 .content .right-column {
     /* 161px */
     width: 0;
-    flex: 1 0 161px;
+    /* flex: 1 0 161px; */
     margin: 10px;
     -webkit-transform: translateZ(0); /* hack around Chrome bug: http://stackoverflow.com/questions/11258877/fixed-element-disappears-in-chrome */
     order :2;
