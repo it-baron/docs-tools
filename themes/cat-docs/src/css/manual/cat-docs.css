@@ -1684,7 +1684,7 @@ ul.simple li:before {
   left: 0;
 }
 
-dl.file > * > dd > em {
+dl.file > dd > em {
     display: block;
     font-style: normal;
     margin-left: 14px;
