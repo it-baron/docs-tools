@@ -2,12 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {%- endblock %}
 
-{%- set render_sidebar = (not embedded) and (not
-theme_nosidebar|tobool) and (sidebars != []) %} {%- set url_root = pathto('', 1)
-%} {% set script_files = ["_static/lib/jquery.min.js", "_static/underscore.js",
-"_static/lib/bootstrap.js", "_static/lib/jquery.cookie.js",
-"_static/controller.js"] %} {%- set github_organization = "ctlst-tech" %} {% macro
-version_selector() %}
+{%- set render_sidebar = (not embedded)
+    and (not theme_nosidebar|tobool)
+    and (sidebars != []) %}
+
+  {%- set url_root = pathto('', 1) %}
+  {% set script_files = ["_static/lib/jquery.min.js",
+      "_static/underscore.js",
+      "_static/lib/bootstrap.js",
+      "_static/lib/jquery.cookie.js",
+      "_static/controller.js"] %}
+
+  {%- set github_organization = "ctlst-tech" %}
+
+  {% macro version_selector() %}
+
 <div class="btn-group version-sidebar">
   {% if theme_eol %}
   <button
@@ -335,13 +344,16 @@ version_selector() %}
         {%- endif -%}
       {% endblock %}
 
-      {% block onboarding_modal %}{% endblock %}
+      {% block onboarding_modal %}
+      {% endblock %}
+
       {%- block versionnav %}
 
-      <script type="text/javascript">
-        // Bootstrap array of links that should trigger a full page reload
-        window.docsExcludedNav = {{ theme_nav_excluded }};
-      </script>
+        <script type="text/javascript">
+          // Bootstrap array of links that should trigger a full page reload
+          window.docsExcludedNav = {{ theme_nav_excluded }};
+        </script>
+
       {%- endblock -%}
     </body>
 

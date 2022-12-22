@@ -9,9 +9,9 @@
 
   /* "Primary Palette" (retrieved April 2019) */
   --primary: rgba(255, 100, 6, 0.8);
-  --leaf: #13aa52;
-  --fern: #12924f;
-  --forest: #116149;
+  --leaf: rgba(255, 100, 6, 0.6);
+  --fern: rgba(255, 100, 6, 0.4);
+  --forest: rgba(255, 100, 6, 0.2);
   --fog: #b8c4c2;
   --graphite: #21313c;
   --white: #fefefe;

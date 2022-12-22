@@ -1317,7 +1317,7 @@ div.admonition {
 .admonition.tip,
 .admonition.admonition-tip,
 .admonition.note, .admonition-instructor {
-    background-color: #E7F6ED;
+    background-color: rgba(255, 100, 6, 0.03);
     border-color: var(--leaf);
 }
 
