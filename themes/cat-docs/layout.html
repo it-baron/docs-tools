@@ -1,6 +1,8 @@
 {%- block doctype -%}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-{%- endblock %} {%- set render_sidebar = (not embedded) and (not
+{%- endblock %}
+
+{%- set render_sidebar = (not embedded) and (not
 theme_nosidebar|tobool) and (sidebars != []) %} {%- set url_root = pathto('', 1)
 %} {% set script_files = ["_static/lib/jquery.min.js", "_static/underscore.js",
 "_static/lib/bootstrap.js", "_static/lib/jquery.cookie.js",
@@ -101,12 +103,22 @@ version_selector() %}
     include sidebartemplate %} {%- endfor %} {%- endif %}
   </div>
 </div>
-{%- endmacro -%} {%- macro script() %} {%- for scriptfile in script_files %}
-<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-{%- endfor %} {%- endmacro -%} {%- macro css() %} {%- for cssfile in css_files
-%}
-<link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+{%- endmacro -%}
+
+{%- macro script() %}
+  {%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+  {%- endfor %}
+{%- endmacro -%}
+
+{%- macro css() %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2" />
+
+{%- for cssfile in css_files %}
+  <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
 {%- endfor %}
+
 <link
   rel="stylesheet"
   href="{{ pathto('_static/' + style, 1) }}"
