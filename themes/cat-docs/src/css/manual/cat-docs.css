@@ -79,7 +79,7 @@ body {
 hr { border: 1px solid #1a1b1c; }
 
 .content {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
 }
 
@@ -276,7 +276,7 @@ div td pre {
 table.docutils {
     width: 100%;
     margin: 24px 0;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
 }
 
