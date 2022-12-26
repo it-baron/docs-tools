@@ -1,5 +1,4 @@
 import * as componentAccordion from '../js/componentAccordion';
-import * as componentAtlas from '../js/componentAtlas';
 import * as componentCloseOpen from '../js/componentCloseOpen';
 import * as componentCodeBlockFix from '../js/componentCodeBlockFix';
 import * as componentCopyButtons from '../js/componentCopyButtons';
@@ -9,6 +8,7 @@ import * as componentFeedback from '../js/componentFeedback';
 import * as componentGuides from '../js/componentGuides';
 import * as componentLightbox from '../js/componentLightbox';
 import * as componentOpenAPI from '../js/componentOpenAPI';
+import * as componentOpenLink from '../js/componentOpenLink';
 import * as componentPillStrip from '../js/componentPillStrip';
 import * as componentSidebar from '../js/componentSidebar';
 import * as componentStitchSidebar from '../js/componentStitchSidebar';
@@ -68,9 +68,7 @@ $(() => {
     fastNav.register(componentToggleController);
     fastNav.register(componentCloseOpen);
     fastNav.register(componentAccordion);
-    if (document.referrer.indexOf('aws.amazon.com') >= 0) {
-        fastNav.register(componentAtlas);
-    }
+    fastNav.register(componentOpenLink);
 
     /* Hide toc if there aren't any items */
     if (!$('.toc > ul > li > ul > li').length) {
