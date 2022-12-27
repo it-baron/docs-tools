@@ -130,16 +130,14 @@ class MainWidget extends preact.Component {
                     <div>
                         <div class={delugeHeaderClass}>
                             <span class="fa fa-angle-down deluge-close-icon-hidden"></span>
-                            <span class="deluge-helpful">Was this page helpful?</span>
+                            <span class="deluge-helpful">Need more info?</span>
                             <span class="fa fa-angle-down deluge-close-icon"
                                 onClick={this.toggleVisibility}></span>
                         </div>
                         {state === STATE_INITIAL && (
                             <div class="deluge-vote">
                                 <a key="voteup" id="rate-up"
-                                    onClick={(e) => this.onInitialVote(e, true)}>Yes</a>
-                                <a key="votedown" id="rate-down"
-                                    onClick={(e) => this.onInitialVote(e, false)}>No</a>
+                                    onClick={(e) => this.onInitialVote(e, true)}>JOIN US ON DISCORD</a>
                             </div>
                         )}
 
