@@ -14,4 +14,4 @@
 
 # Next time we egg, will bump to 0.5.19
 # After egging, will be 0.5.20-dev, but must egg with non-dev  version
-__version__ = '0.5.19-dev'
+__version__ = '0.5.20-dev'

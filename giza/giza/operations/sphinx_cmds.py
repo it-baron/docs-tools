@@ -140,8 +140,7 @@ def sphinx_builder_tasks(app, conf):
         # add all builders response codes. If they're all then we can return 0,
         # otherwise, exit.
         ret_code = sum([o[0] for o in results])
-
-        output = [o[1].split('\n') for o in results if o != '']
+        output = [o[1].decode('utf-8').split('\n') for o in results if o != '']
 
         sphinx_output = list(reduce(itertools.chain, output))
         try:

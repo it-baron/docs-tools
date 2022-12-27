@@ -14,7 +14,7 @@
 
 import logging
 from sphinx.util.osutil import relative_uri
-from sphinx.builders.html import StandaloneHTMLBuilder, DirectoryHTMLBuilder
+from sphinx.builders.dirhtml import StandaloneHTMLBuilder, DirectoryHTMLBuilder
 from sphinx import addnodes
 
 logger = logging.getLogger('fasthtml')
