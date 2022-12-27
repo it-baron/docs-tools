@@ -1754,4 +1754,4 @@ summary::after {
 
 details[open] > summary::after {
     transform: rotate(135deg);
-};
+}
