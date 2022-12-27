@@ -33,7 +33,7 @@ def include_files(conf, files=None):
 
         with open(os.devnull, 'w') as null:
             try:
-                grep = subprocess.check_output(args=cmd, stderr=null)
+                grep = subprocess.check_output(args=cmd, stderr=null, text=True)
             except subprocess.CalledProcessError as e:
                 grep = e.output
 
