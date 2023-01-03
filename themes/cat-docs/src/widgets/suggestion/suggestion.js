@@ -1,4 +1,3 @@
-import {AnonymousCredential, Stitch} from 'mongodb-stitch-browser-sdk';
 import PropTypes from 'prop-types';
 import SuggestionCardList from './SuggestionCardList';
 import preact from 'preact';
@@ -21,7 +20,6 @@ class Suggestion extends preact.Component {
 
     this.handleCloseDrawer = this.handleCloseDrawer.bind(this);
     this.handleDismissCard = this.handleDismissCard.bind(this);
-    this.fetchStitchSuggestions = this.fetchStitchSuggestions.bind(this);
     this.pageName = getPageName();
 
     this.state = {
@@ -29,10 +27,6 @@ class Suggestion extends preact.Component {
       showThankYouMessage: false,
       suggestions: [],
     };
-  }
-
-  componentDidMount() {
-    this.setupStitch();
   }
 
   handleCloseDrawer() {
@@ -45,38 +39,6 @@ class Suggestion extends preact.Component {
   handleDismissCard() {
     this.setState({showThankYouMessage: true});
     reportAnalytics('Suggestions Dismissed');
-  }
-
-  setupStitch() {
-    const appName = 'ref_data-bnbxq';
-    this.stitchClient = Stitch.hasAppClient(appName)
-      ? Stitch.getAppClient(appName)
-      : Stitch.initializeAppClient(appName);
-    this.stitchClient.auth
-      .loginWithCredential(new AnonymousCredential())
-      .then(user => {
-        this.fetchStitchSuggestions();
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
-
-  fetchStitchSuggestions() {
-    this.stitchClient.callFunction('fetchSuggestions', [this.pageName]).then(
-      result => {
-        this.setState({
-          isLoaded: true,
-          suggestions: result,
-        });
-      },
-      error => {
-        console.log('error', error);
-        this.setState({
-          isLoaded: true,
-        });
-      }
-    );
   }
 
   render() {
