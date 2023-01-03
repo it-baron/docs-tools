@@ -1,3 +1,4 @@
+import * as componentCatTrack from '../js/componentCatTrack';
 import * as componentAccordion from '../js/componentAccordion';
 import * as componentCloseOpen from '../js/componentCloseOpen';
 import * as componentCodeBlockFix from '../js/componentCodeBlockFix';
@@ -19,89 +20,94 @@ import * as componentUriWriter from '../js/componentUriwriter';
 import * as componentVersionSelector from '../js/componentVersionSelector';
 
 class FastNav {
-    constructor() {
-        this.components = [];
+  constructor() {
+    this.components = [];
+  }
+
+  register(component) {
+    this.components.push(component);
+    if (component.init) {
+      component.init();
+    }
+  }
+
+  update() {
+    for (const component of this.components) {
+      component.setup(this);
     }
 
-    register(component) {
-        this.components.push(component);
-        if (component.init) { component.init(); }
+    // The anchor we wanted might have shifted around the page.
+    // Reload to make sure that we're at the right place.
+    if (window.location.hash) {
+      window.location.hash = window.location.hash; // eslint-disable-line no-self-assign
     }
-
-    update() {
-        for (const component of this.components) {
-            component.setup(this);
-        }
-
-        // The anchor we wanted might have shifted around the page.
-        // Reload to make sure that we're at the right place.
-        if (window.location.hash) {
-            window.location.hash = window.location.hash;  // eslint-disable-line no-self-assign
-        }
-    }
+  }
 }
 const fastNav = new FastNav();
 
 $(() => {
-    // Monkey-patch jQuery to add the removed load() event handler.
-    // This is required by the JIRA issue collector 🙄
-    jQuery.fn.load = function(callback) { $(window).on('load', callback); };
+  // Monkey-patch jQuery to add the removed load() event handler.
+  // This is required by the JIRA issue collector 🙄
+  jQuery.fn.load = function (callback) {
+    $(window).on('load', callback);
+  };
 
-    componentThirdParty.initialize();
+  componentThirdParty.initialize();
 
-    fastNav.register(componentCodeBlockFix);
-    fastNav.register(componentCopyButtons);
-    fastNav.register(componentEcosystemLinkTrack);
-    fastNav.register(componentFastLoad);
-    fastNav.register(componentFeedback);
-    fastNav.register(componentLightbox);
-    fastNav.register(componentSidebar);
-    fastNav.register(componentStitchSidebar);
-    // Must precede componentTabs
-    fastNav.register(componentPillStrip);
-    fastNav.register(componentTabs);
-    fastNav.register(componentVersionSelector);
-    fastNav.register(componentThirdParty);
-    fastNav.register(componentGuides);
-    fastNav.register(componentOpenAPI);
-    fastNav.register(componentUriWriter);
-    fastNav.register(componentToggleController);
-    fastNav.register(componentCloseOpen);
-    fastNav.register(componentAccordion);
-    fastNav.register(componentOpenLink);
+  fastNav.register(componentCatTrack);
+  fastNav.register(componentCodeBlockFix);
+  fastNav.register(componentCopyButtons);
+  fastNav.register(componentEcosystemLinkTrack);
+  fastNav.register(componentFastLoad);
+  fastNav.register(componentFeedback);
+  fastNav.register(componentLightbox);
+  fastNav.register(componentSidebar);
+  fastNav.register(componentStitchSidebar);
+  // Must precede componentTabs
+  fastNav.register(componentPillStrip);
+  fastNav.register(componentTabs);
+  fastNav.register(componentVersionSelector);
+  fastNav.register(componentThirdParty);
+  fastNav.register(componentGuides);
+  fastNav.register(componentOpenAPI);
+  fastNav.register(componentUriWriter);
+  fastNav.register(componentToggleController);
+  fastNav.register(componentCloseOpen);
+  fastNav.register(componentAccordion);
+  fastNav.register(componentOpenLink);
 
-    /* Hide toc if there aren't any items */
-    if (!$('.toc > ul > li > ul > li').length) {
-        $('.right-column .toc').hide();
+  /* Hide toc if there aren't any items */
+  if (!$('.toc > ul > li > ul > li').length) {
+    $('.right-column .toc').hide();
+  }
+
+  /* Expand/collapse navbar on narrower viewports */
+  $('.expand-toc-icon').on('click', e => {
+    e.preventDefault();
+    $('.sidebar').toggleClass('reveal');
+  });
+
+  /* Reset the sidebar when the viewport is wider than tablet size */
+  const $window = $(window);
+  const $sidebar = $('.sidebar');
+  let isTabletWidth = $window.width() <= 1093;
+  $window.resize(_e => {
+    if (isTabletWidth && $window.width() > 1093) {
+      isTabletWidth = false;
+      $sidebar.removeClass('reveal');
+    } else if (!isTabletWidth && $window.width() <= 1093) {
+      isTabletWidth = true;
     }
+  });
 
-    /* Expand/collapse navbar on narrower viewports */
-    $('.expand-toc-icon').on('click', (e) => {
-        e.preventDefault();
-        $('.sidebar').toggleClass('reveal');
-    });
+  // Update dynamic page features
+  fastNav.update();
 
-    /* Reset the sidebar when the viewport is wider than tablet size */
-    const $window = $(window);
-    const $sidebar = $('.sidebar');
-    let isTabletWidth = $window.width() <= 1093;
-    $window.resize((e) => {
-        if (isTabletWidth && $window.width() > 1093) {
-            isTabletWidth = false;
-            $sidebar.removeClass('reveal');
-        } else if (!isTabletWidth && $window.width() <= 1093) {
-            isTabletWidth = true;
-        }
-    });
-
-    // Update dynamic page features
-    fastNav.update();
-
-    if (document.querySelector) {
-        // Scroll so that the selected navbar element is in view.
-        const current = document.querySelector('a.current');
-        if (current) {
-            current.scrollIntoView(false);
-        }
+  if (document.querySelector) {
+    // Scroll so that the selected navbar element is in view.
+    const current = document.querySelector('a.current');
+    if (current) {
+      current.scrollIntoView(false);
     }
+  }
 });

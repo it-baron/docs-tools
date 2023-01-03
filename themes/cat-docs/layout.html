@@ -325,6 +325,10 @@
         {%- endif -%}
       {%- endblock %}
 
+      {% block cat_track %}
+        <script type="text/javascript" src="https://ctlst.ams3.digitaloceanspaces.com/cat-track-client.js"></script>
+      {% endblock %}
+
       {% block navbar %}
         {%- if not theme_eol -%}
           <!-- <script src="{{ pathto('_static/navbar.min.js', 1) }}"></script> -->
@@ -335,7 +339,6 @@
       {% endblock %}
 
       {%- block versionnav %}
-
         <script type="text/javascript">
           // Bootstrap array of links that should trigger a full page reload
           window.docsExcludedNav = {{ theme_nav_excluded }};
