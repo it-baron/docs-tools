@@ -13,5 +13,20 @@ export function setup() {
         console.log('__cat_track_event not found');
       };
 
-  console.log('[*] CatTrack initialized.');
+  // console.log('[*] CatTrack initialized.');
+  const sessionId = 'unknown';
+  const userId = {};
+
+  catTrackFn(
+    {
+      TRACKING_ENABLED: false,
+      CONSOLE_TRACKING: true,
+    },
+    'docs',
+    {type: 'VISIT', subType: 'DIRECT_LINK_HIT'},
+    sessionId,
+    userId,
+    {},
+    {}
+  );
 }
