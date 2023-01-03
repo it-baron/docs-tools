@@ -320,14 +320,8 @@
       </div>
 
       {%- block header %}
-        {%- if not theme_eol -%}
-        <!-- <div id="navbar" data-navprops='{"links": [{"url": "{{theme_base_url}}/manual/","text": "Server"},{"url": "{{theme_base_url}}/ecosystem/drivers/","text": "Drivers"},{"url": "{{theme_base_url}}/cloud/","text": "Cloud"},{"url": "{{theme_base_url}}/tools/","text": "Tools"},{"url": "{{theme_base_url}}/guides/","text": "Guides","active": true}], "baseUrl": "{{theme_base_url}}"}'></div> -->
-        {%- endif -%}
-      {%- endblock %}
-
-      {% block cat_track %}
         <script type="text/javascript" src="https://ctlst.ams3.digitaloceanspaces.com/cat-track-client.js"></script>
-      {% endblock %}
+      {%- endblock %}
 
       {% block navbar %}
         {%- if not theme_eol -%}
