@@ -16,7 +16,6 @@ import * as componentStitchSidebar from '../js/componentStitchSidebar';
 import * as componentTabs from '../js/componentTabs';
 import * as componentThirdParty from '../js/componentThirdParty';
 import * as componentToggleController from '../js/componentToggleController';
-import * as componentUriWriter from '../js/componentUriwriter';
 import * as componentVersionSelector from '../js/componentVersionSelector';
 
 class FastNav {
@@ -55,9 +54,10 @@ $(() => {
   componentThirdParty.initialize();
 
   fastNav.register(componentCatTrack);
+  fastNav.register(componentOpenLink);
+
   fastNav.register(componentCodeBlockFix);
   fastNav.register(componentCopyButtons);
-  fastNav.register(componentEcosystemLinkTrack);
   fastNav.register(componentFastLoad);
   fastNav.register(componentFeedback);
   fastNav.register(componentLightbox);
@@ -66,15 +66,11 @@ $(() => {
   // Must precede componentTabs
   fastNav.register(componentPillStrip);
   fastNav.register(componentTabs);
-  fastNav.register(componentVersionSelector);
-  fastNav.register(componentThirdParty);
   fastNav.register(componentGuides);
   fastNav.register(componentOpenAPI);
-  fastNav.register(componentUriWriter);
   fastNav.register(componentToggleController);
   fastNav.register(componentCloseOpen);
   fastNav.register(componentAccordion);
-  fastNav.register(componentOpenLink);
 
   /* Hide toc if there aren't any items */
   if (!$('.toc > ul > li > ul > li').length) {
