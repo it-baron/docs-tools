@@ -19,8 +19,8 @@ export function setup() {
 
   catTrackFn(
     {
-      TRACKING_ENABLED: false,
-      CONSOLE_TRACKING: true,
+      TRACKING_ENABLED: true,
+      CONSOLE_TRACKING: false,
     },
     'docs',
     {type: 'VISIT', subType: 'DIRECT_LINK_HIT'},
