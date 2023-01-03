@@ -28,21 +28,12 @@
 {%- block righttoc %} {% endblock %}
 
 {%- block sitesearch %}
-  {%- if builder != 'singlehtml' %}
-      <script>
-        window.googleSearchCx = "017213726194841070573:WMX6838984"
-	window.googleSearchPlaceholder = "Search Documentation"
-        window.googleSearchResultsUrl = "{{theme_base_url}}/manual/search/"
-      </script>
-  {%- endif %}
+  <script type="text/javascript" src="https://ctlst.ams3.digitaloceanspaces.com/cat-track-client.js"></script>
 {%- endblock -%}
 
 
 {%- block header %}
-<!-- <div id="navbar" data-navprops='{"links": [{"url": "{{theme_base_url}}/manual/","text": "Server","active": true},{"url": "{{theme_base_url}}/drivers/","text": "Drivers"},{"url": "{{theme_base_url}}/cloud/","text": "Cloud"},{"url": "{{theme_base_url}}/tools/","text": "Tools"},{"url": "{{theme_base_url}}/guides/","text": "Guides"}], "baseUrl": "{{theme_base_url}}"}'></div> -->
 {%- endblock %}
-
-
 
 {%- block pdflink %}{%- endblock %}
 
